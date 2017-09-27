@@ -8,17 +8,17 @@
        $text = "program  started<br>";
        echo "$text";
        $text = "<h1>String Function Demonstration-PRINT</h1><br>";
-       stringFunctions::printhis($text);
+       stringFunctions::printThis($text);
        $text = "Sample Text<br>";
-       stringFunctions::printhis($text);
+       stringFunctions::printThis($text);
        $text = "<hr><br>";
-       stringFunctions::printhis($text);
+       stringFunctions::printThis($text);
        $text = "<h1>Array Function Demonstration-ARRAY</h1><br>";
-       stringFunctions::printhis($text);
+       stringFunctions::printThis($text);
        $myArray = array(1,2,3,4,5);
        arrayFunctions::printArray($myArray);
        $text = "<hr><br>";
-       stringFunctions::printhis($text);
+       stringFunctions::printThis($text);
     }
 
     public function __destruct() {
@@ -34,7 +34,7 @@
 
   class arrayFunctions {
      static public function printArray($myArray) {
-        array($myArray);
+       print_r ($myArray);
      }
   }
 

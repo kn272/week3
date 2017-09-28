@@ -76,6 +76,64 @@
        $text = "<hr><br>";
        stringFunctions::printThis($text);
 
+       $array1 = array(1,2,3,4,5);
+       $array2 = array(6,7,8,9,0);
+
+       $text = "<h1>array sum  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arraySum($myArray);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>array reverse  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arrayReverse($myArray);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+
+       $text = "<h1>array keys  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arrayKeys($myArray);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>array krsort  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arrayKrsort($myArray);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>array arsort  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arrayArsort($myArray);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>array count  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arrayCount($myArray);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>array in_element  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arrayInelement($myArray);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>array merge  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arrayMerge($array1,$array2);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>array flip  function demo</h1><br>";
+       stringFunctions::printThis($text);
+       arrayFunctions::arrayFlip($myArray);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
     }
 
     public function __destruct() {
@@ -126,21 +184,21 @@
         $text = "the text to be repeated";
 	print($text);
 	echo "<br>";
-        print(str_repeat($text));
+        print(str_repeat($text,2));
      }
 
      static public function str_word_countF($text) {
-     $text = "the text to be counted";
-     print($text);
-     echo "<br>";
-     print(str_word_count($text));
+        $text = "the text to be counted";
+        print($text);
+        echo "<br>";
+        print(str_word_count($text));
      }
 
      static public function strcmpF($text) {
-     $text = "comparing one and two";
-     print($text);
-     echo "<br>";
-     print(strcmp("one","two"));
+        $text = "comparing one and two";
+        print($text);
+        echo "<br>";
+        print(strcmp("one","two"));
      }
 
      static public function echoF($text) {
@@ -150,9 +208,51 @@
   }
 
   class arrayFunctions {
-     static public function printArray($myArray) {
-       print_r ($myArray);
-     }
-  }
 
+     static public function printArray($myArray) {
+        print_r ($myArray);
+     }
+
+     static public function arraySum($myArray) {
+       echo "the sum is....";
+       print(array_sum($myArray));
+     } 
+
+     static public function arrayReverse($myArray) {
+        print_r(array_reverse($myArray));
+     }
+
+     static public function arrayKeys($myArray) {
+        print_r(array_keys($myArray));
+     }
+
+     static public function arrayArsort($myArray) {
+        arsort($myArray);
+	print_r($myArray);
+     }
+
+     static public function arrayKrsort($myArray) {
+        krsort($myArray);
+	print_r($myArray);
+     }
+
+     static public function arrayCount($myArray) {
+        print(count($myArray));
+     }
+
+     static public function arrayInelement($myArray) {
+        echo "search element-2 array-1,2,3,4,5<br>";
+        print(in_array(2,$myArray));
+     }
+     static public function arrayMerge($array1,$array2) {
+        echo "the merge of 1,2,3,4,5 and 6,7,8,9,0 is...<br>";
+	print_r(array_merge($array1,$array2));
+     }
+
+     static public function arrayFlip($myArray) {
+        echo "array flip of 0->1 1->2 2->3 3->4 4->5<br>";
+        print_r(array_flip($myArray));
+     }
+
+  }
 ?>

@@ -51,6 +51,23 @@
        $text = "<hr><br>";
        stringFunctions::printThis($text);
 
+       $text = "<h1>Str_word_count  Function Demonstration</h1><br>";
+       stringFunctions::printThis($text);
+       stringFunctions::str_word_countF($text);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>Strcmp  Function Demonstration</h1><br>";
+       stringFunctions::printThis($text);
+       stringFunctions::strcmpF($text);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
+
+       $text = "<h1>echo  Function Demonstration</h1><br>";
+       stringFunctions::printThis($text);
+       stringFunctions::echoF($text);
+       $text = "<hr><br>";
+       stringFunctions::printThis($text);
 
        $text = "<h1>Array Function Demonstration</h1><br>";
        stringFunctions::printThis($text);
@@ -67,31 +84,37 @@
     } 
   }
   class stringFunctions {
+
      static public function printThis($text) {
         print($text);
      }
+
      static public function strlenF($text) {
          $text = "the length of KISHORE is.....";
 	 echo "<br>";
 	 print($text);
 	 print(strlen($text));
      }
+
      static public function strrevF($text) {
         $text = "the text to be reversed";
 	echo "<br>";
 	print($text);
 	print(strrev($text));
      }
+
      static public function strtolowerF($text) {
         $text = "THE TEXT TO BE LOWERED<br>";
 	print($text);
 	print(strtolower($text));
      }
+
      static public function strtoupperF($text) {
         $text = "the text to be uppered<br>";
 	print($text);
 	print(strtoupper($text));
      }
+
      static public function str_shuffleF($text) {
 	$text = "the text to be shuffled";
 	print($text);
@@ -105,7 +128,24 @@
 	echo "<br>";
         print(str_repeat($text));
      }
-				  
+
+     static public function str_word_countF($text) {
+     $text = "the text to be counted";
+     print($text);
+     echo "<br>";
+     print(str_word_count($text));
+     }
+
+     static public function strcmpF($text) {
+     $text = "comparing one and two";
+     print($text);
+     echo "<br>";
+     print(strcmp("one","two"));
+     }
+
+     static public function echoF($text) {
+     echo "<br>this is a sample of echo command";
+     }
 
   }
 
